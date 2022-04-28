@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/theKayani/hklib-lualibs.svg?branch=main)](https://travis-ci.com/github/theKayani/hklib-lualibs)
+
 # lualibs
 _(extension of hklib)_
 
@@ -6,12 +8,13 @@ library, which contains a Lua Interpreter with strong Java
 integration. This library encompasses various native Java packages and
 functionalities into various types of [`LuaLibrary`](https://javadoc.io/doc/com.thekayani/hklib/latest/com/hk/lua/package-summary.html) s.
 
-##### Version: 1.0 / _hklib-1.2.1_
+##### Version: 1.0 / _built with_ [_hklib-1.2.1_](https://mvnrepository.com/artifact/com.thekayani/hklib/1.2.1)
 
 ### Current Features
 - Socket Library _(WIP)_
 - Graphics Library _(WIP)_
 - HTTP Library _(WIP)_
+- File System Library _(WIP)_
 
 ## Usage
 
