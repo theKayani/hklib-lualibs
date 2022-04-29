@@ -35,5 +35,6 @@ argfile.txt
 .classpath
 .project
 
-# test lua file
+# test code files
 src/test/resources/assets/lua/main.lua
+src/test/java/com/hk/TestMain.java
