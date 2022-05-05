@@ -10,7 +10,7 @@
 
   <groupId>com.thekayani</groupId>
   <artifactId>hklib-lualibs</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>
     This library encompasses various native Java packages and functionalities into various types of Lua libraries.
@@ -24,8 +24,8 @@
   </licenses>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <developers>
     <developer>
@@ -51,9 +51,15 @@
   </distributionManagement>
   <dependencies>
     <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>23.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>com.thekayani</groupId>
       <artifactId>hklib</artifactId>
-      <version>1.2.1</version>
+      <version>1.2.2</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -69,8 +75,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <excludes>
             <exclude>com/hk/Main.java</exclude>
           </excludes>

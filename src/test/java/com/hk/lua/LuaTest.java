@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.io.FileNotFoundException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class LuaTest
 {
@@ -29,6 +29,12 @@ public class LuaTest
 	}
 
 	@Test
+	public void libraryUUID() throws FileNotFoundException
+	{
+		testLibrary(LuaLibraries.UUID);
+	}
+
+	@Test
 	public void libraryG2D() throws FileNotFoundException
 	{
 		testLibrary(new LuaLibrary<>("g2d", LuaLibraryG2D.class));
@@ -42,13 +48,7 @@ public class LuaTest
 
 	private static void testLibrary(final LuaLibrary<?> library) throws FileNotFoundException
 	{
-		testLibrary(library.table, new Consumer<LuaInterpreter>() {
-			@Override
-			public void accept(LuaInterpreter interp)
-			{
-				interp.importLib(library);
-			}
-		});
+		testLibrary(library.table, interp -> interp.importLib(library));
 	}
 
 	private static void testLibrary(String file, Consumer<LuaInterpreter> consumer) throws FileNotFoundException
