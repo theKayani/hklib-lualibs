@@ -20,6 +20,7 @@ functionalities into various types of [`LuaLibrary`](https://javadoc.io/doc/com.
 - _File System Library (WIP)_
 - _Javax Swing Library (WIP)_
 - _Vector, Matrix, Quaternion Library (WIP)_
+- _Neural Network Library (WIP)_
 - _Unit Testing Library (WIP)_
 
 ## Usage

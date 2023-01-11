@@ -13,6 +13,7 @@ import java.util.UUID;
  */
 public enum LuaLibraryUUID implements BiConsumer<Environment, LuaObject>, Lua.LuaMethod
 {
+	/** */
 	_new() {
 		@Override
 		public LuaObject call(LuaInterpreter interp, LuaObject[] args)
@@ -120,11 +121,21 @@ public enum LuaLibraryUUID implements BiConsumer<Environment, LuaObject>, Lua.Lu
 		uuidMetatable.rawSet("variant", Lua.newFunc(LuaLibraryUUID::variant));
 	}
 
+	/**
+	 * This class encapsulates a {@link java.util.UUID} to be used
+	 * within a Lua environment.
+	 */
 	public static class LuaUUID extends LuaUserdata
 	{
 		private final UUID uuid;
 
-		public LuaUUID(UUID uuid)
+		/**
+		 * This constructor creates a {@link LuaObject} that
+		 * encapsulates a Java UUID.
+		 *
+		 * @param uuid a non-null UUID value
+		 */
+		public LuaUUID(@NotNull UUID uuid)
 		{
 			this.uuid = Objects.requireNonNull(uuid);
 
@@ -151,12 +162,6 @@ public enum LuaLibraryUUID implements BiConsumer<Environment, LuaObject>, Lua.Lu
 		public UUID getUserdata()
 		{
 			return uuid;
-		}
-
-		@Override
-		public void doNewIndex(@Nullable LuaInterpreter interp, @NotNull LuaObject key, @NotNull LuaObject value)
-		{
-			super.doNewIndex(interp, key, value);
 		}
 	}
 }
