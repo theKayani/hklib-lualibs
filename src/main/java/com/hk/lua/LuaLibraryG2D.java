@@ -1,6 +1,6 @@
 package com.hk.lua;
 
-import com.hk.func.BiConsumer;
+import java.util.function.BiConsumer;
 
 /**
  * This library uses the {@link com.hk.util.G2D} class to pipe all

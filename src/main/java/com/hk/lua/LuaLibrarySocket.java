@@ -1,6 +1,6 @@
 package com.hk.lua;
 
-import com.hk.func.BiConsumer;
+import java.util.function.BiConsumer;
 
 /**
  * This library exposes the Java Client/Server Socket API using a Lua library.

@@ -10,7 +10,7 @@ library, which contains a Lua Interpreter with strong Java
 integration. This library encompasses various native Java packages and
 functionalities into various types of [`LuaLibrary`](https://javadoc.io/doc/com.thekayani/hklib/latest/com/hk/lua/package-summary.html) s.
 
-##### Version: 1.0.1 / _built with_ [_hklib-1.2.2_](https://mvnrepository.com/artifact/com.thekayani/hklib/1.2.2) _and_ `java 1.8`
+##### Version: 1.0.2 / _built with_ [_hklib-1.3.1_](https://mvnrepository.com/artifact/com.thekayani/hklib/1.3.1) _and_ `java 1.8`
 
 ### Current Features
 - UUID Library
@@ -19,6 +19,7 @@ functionalities into various types of [`LuaLibrary`](https://javadoc.io/doc/com.
 - _HTTP Library (WIP)_
 - _File System Library (WIP)_
 - _Javax Swing Library (WIP)_
+- _Java Discord API Library (WIP)_
 - _Vector, Matrix, Quaternion Library (WIP)_
 - _Neural Network Library (WIP)_
 - _Unit Testing Library (WIP)_
@@ -37,14 +38,14 @@ Add `hklib-lualibs` dependency
     <dependency>
         <groupId>com.thekayani</groupId>
         <artifactId>hklib-lualibs</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 
 ### Gradle
 Add `hklib-lualibs` dependency
 
     dependencies {
-	        implementation 'com.thekayani:hklib-lualibs:1.0.1'
+	        implementation 'com.thekayani:hklib-lualibs:1.0.2'
 	}
 
 ### Flat `jar` File

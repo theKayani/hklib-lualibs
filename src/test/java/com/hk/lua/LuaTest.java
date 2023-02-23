@@ -1,11 +1,12 @@
 package com.hk.lua;
 
 import com.hk.Assets;
-import com.hk.func.Consumer;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.function.Consumer;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class LuaTest
@@ -46,12 +47,12 @@ public class LuaTest
 		testLibrary(new LuaLibrary<>("swing", LuaLibrarySwing.class));
 	}
 
-	private static void testLibrary(final LuaLibrary<?> library) throws FileNotFoundException
+	public static void testLibrary(final LuaLibrary<?> library) throws FileNotFoundException
 	{
 		testLibrary(library.table, interp -> interp.importLib(library));
 	}
 
-	private static void testLibrary(String file, Consumer<LuaInterpreter> consumer) throws FileNotFoundException
+	public static void testLibrary(String file, Consumer<LuaInterpreter> consumer) throws FileNotFoundException
 	{
 		final LuaInterpreter interp = Lua.reader(Assets.get("lua/library_" + file + ".lua"));
 
@@ -61,9 +62,9 @@ public class LuaTest
 		interp.importLib(LuaLibrary.PACKAGE);
 		consumer.accept(interp);
 
-		Object obj = interp.execute();
+		LuaObject obj = interp.execute();
 
-		assertTrue(obj instanceof LuaObject);
-		assertTrue(((LuaObject) obj).getBoolean());
+		assertNotNull(obj);
+		assertTrue(obj.getBoolean());
 	}
 }

@@ -1,6 +1,6 @@
 package com.hk.lua;
 
-import com.hk.func.BiConsumer;
+import java.util.function.BiConsumer;
 
 /**
  * This library opens the {@link javax.swing} package to easily

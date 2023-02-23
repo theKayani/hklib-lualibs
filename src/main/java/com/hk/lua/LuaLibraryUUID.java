@@ -1,9 +1,9 @@
 package com.hk.lua;
 
-import com.hk.func.BiConsumer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.function.BiConsumer;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -114,11 +114,11 @@ public enum LuaLibraryUUID implements BiConsumer<Environment, LuaObject>, Lua.Lu
 		uuidMetatable.rawSet("__name", "UUID*");
 		uuidMetatable.rawSet("__index", uuidMetatable);
 
-		uuidMetatable.rawSet("version", Lua.newFunc(LuaLibraryUUID::version));
-		uuidMetatable.rawSet("node", Lua.newFunc(LuaLibraryUUID::node));
-		uuidMetatable.rawSet("clockSequence", Lua.newFunc(LuaLibraryUUID::clockSequence));
-		uuidMetatable.rawSet("timestamp", Lua.newFunc(LuaLibraryUUID::timestamp));
-		uuidMetatable.rawSet("variant", Lua.newFunc(LuaLibraryUUID::variant));
+		uuidMetatable.rawSet("version", Lua.newMethod(LuaLibraryUUID::version));
+		uuidMetatable.rawSet("node", Lua.newMethod(LuaLibraryUUID::node));
+		uuidMetatable.rawSet("clockSequence", Lua.newMethod(LuaLibraryUUID::clockSequence));
+		uuidMetatable.rawSet("timestamp", Lua.newMethod(LuaLibraryUUID::timestamp));
+		uuidMetatable.rawSet("variant", Lua.newMethod(LuaLibraryUUID::variant));
 	}
 
 	/**

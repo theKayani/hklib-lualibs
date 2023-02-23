@@ -1,6 +1,6 @@
 package com.hk.lua;
 
-import com.hk.func.BiConsumer;
+import java.util.function.BiConsumer;
 
 /**
  * This library allows the usage of Java Files, Paths, and Iterators
